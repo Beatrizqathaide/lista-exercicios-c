@@ -23,13 +23,30 @@ int produtoPositivos(int n) {
     
 }
 
+int apresentar(int n, int res) {
+    for (int i = n; i >= 1; i--) {
+        if (i > 1) {
+            printf("%d * ", i);
+        }
+        
+        if (i == 1) {
+            printf("%d = %d\n", i, res);
+        }
+    }
+}
+
 int main() {
-    int n, resultado;
+    int n, resultado, apresentacao;
     
     printf("Digite um valor: ");
     scanf("%d%*c", &n);
 
     resultado = produtoPositivos(n);
-    printf("Resultado: %d\n", resultado);
+    apresentacao = apresentar(n, resultado);
+    printf("Resultado: %d\n", apresentacao);
+
+    
+
+    
 
 }
